@@ -23,12 +23,15 @@ const meta = JSON.parse(fs.readFileSync(path.join(BOOK_DIR, 'en', 'meta.json'), 
 const base = SITE + book.basePath
 
 // Title/subtitle/tagline come straight from the site's meta.json (source of truth).
-const TITLE = meta.title
+// meta.title may carry a "\n" to control the web cover's line break; flatten
+// it to one line for the README heading and image alt text.
+const TITLE = meta.title.replace(/\s*\n\s*/g, ' ')
 const SUBTITLE = meta.subtitle
-const TAGLINE = meta.tagline
+const TAGLINE = meta.tagline.replace(/\.+$/, '')
 
-// Build the table of contents, grouped by part, numbering the main path 1..N.
-let n = 0
+// Build the table of contents, one link per part (not per chapter), so
+// adding/renaming/reordering chapters inside a part never requires a re-run.
+// ponytail: part-level links + blurb from meta.json, no per-chapter listing to maintain.
 const toc = []
 for (const part of book.parts) {
   const p = meta.parts[part.id]
@@ -36,21 +39,15 @@ for (const part of book.parts) {
   if (!chapters.length) continue
 
   const heading = p.stage === p.title ? p.stage : `${p.stage}: ${p.title}`
-  toc.push('')
-  toc.push(`### ${heading}`)
-  toc.push('')
-  for (const c of chapters) {
-    const ch = meta.chapters[c.slug] || {}
-    const label = ch.label ? `${ch.label}: ` : ''
-    const title = ch.title || c.slug
-    const url = `${base}/${c.part}/${c.slug}`
-    const prefix = part.id === 'intro' ? '-' : `${++n}.`
-    toc.push(`${prefix} [${label}${title}](${url})`)
-  }
+  const url = `${base}/${part.id}`
+  toc.push(`- [${heading}](${url}) - ${p.blurb}`)
 }
 
 const published = book.chapters.filter((c) => c.status === 'published').length
 const total = book.chapters.filter((c) => !c.hidden).length
+const partCount = book.parts.filter(
+  (part) => book.chapters.some((c) => c.part === part.id && !c.hidden),
+).length
 
 const badge = (label, msg, color) =>
   `https://img.shields.io/badge/${encodeURIComponent(label)}-${encodeURIComponent(msg)}-${color}`
@@ -94,6 +91,7 @@ AI can write the code. It cannot yet decide what to build, how to structure it, 
 ## Table of contents
 
 The complete arc, from a plain idea to live, scaling software:
+
 ${toc.join('\n')}
 
 ## Coming soon
@@ -132,4 +130,4 @@ Written by [Mahmoud Zalt](${SITE}) · [zalt.me](${SITE})
 `
 
 fs.writeFileSync(path.join(REPO, 'README.md'), readme)
-console.log(`README.md written: ${published}/${total} chapters, ${n} numbered.`)
+console.log(`README.md written: ${published}/${total} chapters across ${partCount} parts.`)

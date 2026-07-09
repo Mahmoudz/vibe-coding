@@ -4,9 +4,9 @@
 
 # Vibe Coding with Confidence
 
-### The Vibecoder's Handbook, idea to production
+### The Vibecoder's Handbook, from idea to production
 
-Zero to live, then keep it running and scaling.
+Build Apps That Work Beyond the Demo.
 
 **A free, end-to-end guide to vibe coding production-grade software with AI**, from a plain idea to live, monitored, scaling software, built with agents like Cursor and Claude Code. No signup, no paywall to start reading.
 
@@ -14,7 +14,7 @@ Zero to live, then keep it running and scaling.
 
 [![Free to read](https://img.shields.io/badge/read-free-16a34a)](https://zalt.me/guides/vibe-coding)
 [![Web book](https://img.shields.io/badge/format-web%20book-111)](https://zalt.me/guides/vibe-coding)
-[![Chapters](https://img.shields.io/badge/chapters-61-2563eb)](https://zalt.me/guides/vibe-coding)
+[![Chapters](https://img.shields.io/badge/chapters-77-2563eb)](https://zalt.me/guides/vibe-coding)
 [![Discussions](https://img.shields.io/github/discussions/Mahmoudz/vibe-coding?color=6d28d9&label=discussions)](../../discussions)
 
 </div>
@@ -38,99 +38,17 @@ AI can write the code. It cannot yet decide what to build, how to structure it, 
 
 The complete arc, from a plain idea to live, scaling software:
 
-### Introduction
-
-- [Start Here](https://zalt.me/guides/vibe-coding/intro/start-here)
-- [How to Read This Book](https://zalt.me/guides/vibe-coding/intro/how-to-read)
-
-### Plan: Structure your idea into a clear specification
-
-1. [Requirements: Turning an Idea Into a List](https://zalt.me/guides/vibe-coding/plan/gathering-requirements)
-2. [MVP: Cutting Scope to the Core](https://zalt.me/guides/vibe-coding/plan/scoping-your-mvp)
-3. [Components: The Pieces of an App](https://zalt.me/guides/vibe-coding/plan/the-pieces-of-an-app)
-4. [Data Model: Mapping What You Store](https://zalt.me/guides/vibe-coding/plan/modeling-your-data)
-5. [NFRs: The Requirements Nobody Says Out Loud](https://zalt.me/guides/vibe-coding/plan/non-functional-requirements)
-6. [Spec: Writing It All Down](https://zalt.me/guides/vibe-coding/plan/writing-the-spec)
-
-### Dev Set Up: Prepare your environment, tools, and AI agent
-
-7. [Stack: Choosing Your Tools](https://zalt.me/guides/vibe-coding/setup/choosing-your-stack)
-8. [Environment: Getting Your Machine Ready](https://zalt.me/guides/vibe-coding/setup/dev-environment)
-9. [Version Control: Never Losing Work](https://zalt.me/guides/vibe-coding/setup/version-control)
-10. [Secrets: Handling Keys and Config](https://zalt.me/guides/vibe-coding/setup/secrets-and-config)
-11. [Agent: Meeting Your AI](https://zalt.me/guides/vibe-coding/setup/meet-your-ai-agent)
-12. [Rules: Setting the Ground Rules](https://zalt.me/guides/vibe-coding/setup/agent-rules)
-
-### AI Set Up: Setup your AI agents operating system
-
-13. [OS-First: Why the System Comes Before the Code](https://zalt.me/guides/vibe-coding/ai-os/os-first)
-14. [Unification: One System for Everything](https://zalt.me/guides/vibe-coding/ai-os/unified-system)
-15. [Departments: Folders as an Org Chart](https://zalt.me/guides/vibe-coding/ai-os/departments-and-folders)
-16. [Control Center: Your Command Hub](https://zalt.me/guides/vibe-coding/ai-os/control-center)
-17. [Configuration: Standing Up Your Agents](https://zalt.me/guides/vibe-coding/ai-os/configuring-agents)
-18. [Scheduling: Putting Agents on a Clock](https://zalt.me/guides/vibe-coding/ai-os/scheduling-your-agents)
-19. [Reporting: Commands and What Comes Back](https://zalt.me/guides/vibe-coding/ai-os/reports-and-commands)
-
-### Architect: Lay out a modular codebase for your AI
-
-20. [Modularity: A Foundation That Bends](https://zalt.me/guides/vibe-coding/architect/modular-foundation)
-21. [Structure: Where Everything Lives](https://zalt.me/guides/vibe-coding/architect/folder-structure)
-22. [Coupling: Keeping Pieces Independent](https://zalt.me/guides/vibe-coding/architect/coupling-and-cohesion)
-23. [Layers: Drawing the Boundaries](https://zalt.me/guides/vibe-coding/architect/boundaries-and-layers)
-24. [Conventions: Naming Things Consistently](https://zalt.me/guides/vibe-coding/architect/conventions-and-naming)
-25. [Handoff: Teaching Your AI the Architecture](https://zalt.me/guides/vibe-coding/architect/architecture-handoff)
-
-### Build: Implement the application in working slices
-
-26. [Scaffolding: Blank Screen to Running App](https://zalt.me/guides/vibe-coding/build/scaffolding)
-27. [Direction: Steering Your Agent](https://zalt.me/guides/vibe-coding/build/directing-your-agent)
-28. [Increments: Working in Small Steps](https://zalt.me/guides/vibe-coding/build/working-in-small-steps)
-29. [Code Review: Checking the Agent's Work](https://zalt.me/guides/vibe-coding/build/reviewing-the-agents-code)
-
-### Debug: Diagnose and fix what the agent breaks
-
-30. [Stack Traces: Reading What Broke](https://zalt.me/guides/vibe-coding/debug/stack-traces)
-31. [Loops: When Your Agent Goes in Circles](https://zalt.me/guides/vibe-coding/debug/agent-loops)
-32. [Bisecting: Finding the Change That Broke It](https://zalt.me/guides/vibe-coding/debug/bisecting)
-33. [Verification: Is It Actually Fixed?](https://zalt.me/guides/vibe-coding/debug/verifying-fixes)
-34. [Rollback: Reverting Safely](https://zalt.me/guides/vibe-coding/debug/rollback)
-35. [Escalation: Getting Unstuck](https://zalt.me/guides/vibe-coding/debug/getting-unstuck)
-
-### Harden: Make it secure, tested, and production-grade
-
-36. [Interface: Designing How It Looks and Feels](https://zalt.me/guides/vibe-coding/harden/designing-the-interface)
-37. [Accounts: Data, Users, and Payments](https://zalt.me/guides/vibe-coding/harden/data-accounts-and-payments)
-38. [Validation: Trusting No Input](https://zalt.me/guides/vibe-coding/harden/validating-input)
-39. [Reliability: Handling Failure Gracefully](https://zalt.me/guides/vibe-coding/harden/making-it-reliable)
-40. [Testing: QA Before Users Find It](https://zalt.me/guides/vibe-coding/harden/testing-and-qa)
-41. [Security: Locking It Down](https://zalt.me/guides/vibe-coding/harden/security)
-42. [Performance: Speed and Accessibility](https://zalt.me/guides/vibe-coding/harden/accessibility-and-performance)
-
-### Ship: Deploy to production on real infrastructure
-
-43. [Deployment: Going to Production](https://zalt.me/guides/vibe-coding/ship/deploying-to-production)
-44. [Environments: Dev, Staging, Production](https://zalt.me/guides/vibe-coding/ship/dev-staging-production)
-45. [IaC: Infrastructure as Code](https://zalt.me/guides/vibe-coding/ship/infrastructure-as-code)
-46. [CI/CD: Automating the Deploy](https://zalt.me/guides/vibe-coding/ship/automating-your-deployment)
-47. [Releases: Safe Rollouts and Rollbacks](https://zalt.me/guides/vibe-coding/ship/safe-releases-and-rollbacks)
-
-### Operate: Run and maintain it in production
-
-48. [Observability: Seeing Inside Your App](https://zalt.me/guides/vibe-coding/operate/observability)
-49. [Alerting: Monitoring and Getting Paged](https://zalt.me/guides/vibe-coding/operate/monitoring-and-alerts)
-50. [Backups: Disaster Recovery](https://zalt.me/guides/vibe-coding/operate/backups-and-disaster-recovery)
-51. [Incidents: Maintenance When Things Break](https://zalt.me/guides/vibe-coding/operate/maintenance-and-incidents)
-52. [Cost: Watching the Bill](https://zalt.me/guides/vibe-coding/operate/watching-the-bill)
-53. [Automation: Letting the System Run Itself](https://zalt.me/guides/vibe-coding/operate/automation)
-
-### Scale: Grow it to handle real traffic and data
-
-54. [Bottlenecks: Finding the Limits](https://zalt.me/guides/vibe-coding/scale/bottlenecks)
-55. [Caching: Easing the Database](https://zalt.me/guides/vibe-coding/scale/caching-and-the-database)
-56. [Horizontal Scaling: Adding Capacity](https://zalt.me/guides/vibe-coding/scale/scaling-out)
-57. [Capacity Planning: Staying Ahead of Growth](https://zalt.me/guides/vibe-coding/scale/capacity-planning)
-58. [Optimization: The Improvement Loop](https://zalt.me/guides/vibe-coding/scale/the-improvement-loop)
-59. [Expertise: When to Call a Pro](https://zalt.me/guides/vibe-coding/scale/when-to-call-a-pro)
+- [Introduction](https://zalt.me/guides/vibe-coding/intro) - What this book is, how to read it, and who wrote it, the on-ramp before chapter one.
+- [Plan: Structure your idea into a clear specification](https://zalt.me/guides/vibe-coding/plan) - Turn a vague idea into a clear, buildable spec before your AI agent writes a single line.
+- [Dev Set Up: Prepare your environment and tools](https://zalt.me/guides/vibe-coding/setup) - Set up your machine, your stack, and your AI agent so you're building, not fighting tools.
+- [AI Set Up: Setup your AI agents operating system](https://zalt.me/guides/vibe-coding/ai-os) - Give your agents a real operating system: memory, tools, scheduling, and guardrails, not one-off chats.
+- [Architect: Lay out a modular codebase for your AI](https://zalt.me/guides/vibe-coding/architect) - Lay out a modular codebase your AI agent can actually navigate, extend, and not wreck.
+- [Build: Implement the application in working slices](https://zalt.me/guides/vibe-coding/build) - Direct your agent through small, reviewable slices instead of one giant, unreviewable generation.
+- [Debug: Diagnose and fix what the agent breaks](https://zalt.me/guides/vibe-coding/debug) - Read stack traces, break agent loops, bisect regressions, and roll back safely when it breaks.
+- [Harden: Make it secure, tested, and reliable](https://zalt.me/guides/vibe-coding/harden) - Make it secure, tested, and production-grade before real users ever touch it.
+- [Ship: Deploy to production on real infrastructure](https://zalt.me/guides/vibe-coding/ship) - Deploy to real infrastructure with environments, CI/CD, and releases you can roll back.
+- [Operate: Run and maintain it in production](https://zalt.me/guides/vibe-coding/operate) - Keep it alive: logging, observability, alerting, backups, and incident response.
+- [Scale: Grow it to handle real traffic and data](https://zalt.me/guides/vibe-coding/scale) - Grow it to handle real traffic and data without blowing the budget or the database.
 
 ## Coming soon
 
