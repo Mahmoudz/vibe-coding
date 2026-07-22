@@ -46,17 +46,13 @@ The complete arc, one stage per part:
 | **12** | [**Operate**](https://zalt.me/guides/vibe-coding/operate) | Keep it alive: logging, observability, alerting, backups, and incident response. |
 | **13** | [**Scale**](https://zalt.me/guides/vibe-coding/scale) | Grow it to handle real traffic and data without blowing the budget or the database. |
 
-## Companion system (separate project, coming soon)
+## Want the ready-made system?
 
-The book teaches the principles, tool-agnostic and evergreen. Separately, an **optional reference implementation** is on the way: one batteries-included way to run everything the book describes. You install and adapt it; the book never depends on it. It ships as its own project and gets linked right here.
+This book teaches you to build your **own** AI operating system to run your agents. That is the point: you learn how it works, and you get something shaped exactly for how you build.
 
-- **AI OS**: a ready-to-run operating system for your agents, the control center, departments, scheduling, and reports the book builds.
-- **Agents**: preconfigured Claude Code agents you drop in and run.
-- **Boilerplates**: production-shaped scaffolds with the modular structure and agent house-rules already wired.
-- **Skills**: reusable agent workflows, drop into `.claude/skills/` and go.
-- **Examples**: worked, runnable code and artifacts from the chapters.
+If you would rather start from a working one, there may be a shortcut. The author runs a private, battle-tested system that does what this book describes, and it could be released as its own project.
 
-Nothing shipped yet. Star the repo and it will be linked here the moment it lands.
+**Want it? [Vote for it in the discussions →](../../discussions).** Enough interest and it ships.
 
 ## This repo
 
