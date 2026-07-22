@@ -29,18 +29,20 @@ const TITLE = meta.title.replace(/\s*\n\s*/g, ' ')
 const SUBTITLE = meta.subtitle
 const TAGLINE = meta.tagline.replace(/\.+$/, '')
 
-// Build the table of contents, one link per part (not per chapter), so
-// adding/renaming/reordering chapters inside a part never requires a re-run.
-// ponytail: part-level links + blurb from meta.json, no per-chapter listing to maintain.
-const toc = []
+// Build the table of contents as a scannable table: one row per part (not per
+// chapter), numbered 01-N with the Introduction left unnumbered. Part-level
+// links, so adding/renaming/reordering chapters inside a part never re-runs.
+// ponytail: table + blurb from meta.json, no per-chapter listing to maintain.
+const toc = ['| # | Stage | What you walk away with |', '|:---:|:---|:---|']
+let stageNum = 0
 for (const part of book.parts) {
   const p = meta.parts[part.id]
   const chapters = book.chapters.filter((c) => c.part === part.id && !c.hidden)
   if (!chapters.length) continue
 
-  const heading = p.stage === p.title ? p.stage : `${p.stage}: ${p.title}`
+  const num = part.id === 'intro' ? '' : `**${String(++stageNum).padStart(2, '0')}**`
   const url = `${base}/${part.id}`
-  toc.push(`- [${heading}](${url}) - ${p.blurb}`)
+  toc.push(`| ${num} | [**${p.stage}**](${url}) | ${p.blurb} |`)
 }
 
 const published = book.chapters.filter((c) => c.status === 'published').length
@@ -62,7 +64,7 @@ const readme = `<div align="center">
 
 ${TAGLINE}.
 
-**A free, end-to-end guide to vibe coding production-grade software with AI**, from a plain idea to live, monitored, scaling software, built with agents like Cursor and Claude Code. No signup, no paywall to start reading.
+**A free, end-to-end guide to building production-grade software with AI**, from a plain idea to live, scaling software, using agents like Cursor and Claude Code. No signup, no paywall to start.
 
 [**Read it free online →**](${base})
 
@@ -75,48 +77,37 @@ ${TAGLINE}.
 
 ---
 
-This is the **community and companion repository** for the book, not the book text itself. It exists for two things:
+AI writes the code. It cannot decide **what** to build, **how** to structure it, when it is **wrong**, or what "production-grade" actually means. This book teaches the professional lifecycle around the code, from a plain idea to live, monitored, scaling software, at a level a non-pro can follow.
 
-1. **Discussions and Q&A** on the book and on every chapter. Ask questions, share what you built, and correct or extend a chapter, right where you read it.
-2. **Companion materials you can install and use**: an AI OS, agents, boilerplates, Claude Code skills, and worked examples. See [Coming soon](#coming-soon).
+**Who it's for:** people who build mostly by directing an AI agent (Cursor, Claude Code, and friends) and want apps that hold up in production, not demos that fall over. No CS degree assumed. If you can describe what you want and read what the agent gives back, you're in.
 
-## Who it's for
+## What's inside
 
-People who build software mostly by directing an AI agent (Cursor, Claude Code, and friends) and want to ship apps that are actually reliable, secure, and maintainable, not just demos that fall over in production. No CS degree assumed. If you can describe what you want and read what the agent gives back, this is for you.
-
-## Why it exists
-
-AI can write the code. It cannot yet decide what to build, how to structure it, when it is wrong, or what "production-grade" means. This book teaches the professional lifecycle around the code, from a plain idea to live, monitored, scaling software, at a level a non-pro can follow. Full reasoning lives in the book itself.
-
-## Table of contents
-
-The complete arc, from a plain idea to live, scaling software:
+The complete arc, one stage per part:
 
 ${toc.join('\n')}
 
-## Coming soon
+## Companion system (separate project, coming soon)
 
-Companion materials you'll be able to install and use, landing here as their chapters go live:
+The book teaches the principles, tool-agnostic and evergreen. Separately, an **optional reference implementation** is on the way: one batteries-included way to run everything the book describes. You install and adapt it; the book never depends on it. It ships as its own project and gets linked right here.
 
 - **AI OS**: a ready-to-run operating system for your agents, the control center, departments, scheduling, and reports the book builds.
 - **Agents**: preconfigured Claude Code agents you drop in and run.
-- **Boilerplates and starters**: production-shaped project scaffolds with the modular structure and agent house-rules already wired.
-- **Claude Code skills**: reusable agent workflows the book teaches, drop into \`.claude/skills/\` and go.
+- **Boilerplates**: production-shaped scaffolds with the modular structure and agent house-rules already wired.
+- **Skills**: reusable agent workflows, drop into \`.claude/skills/\` and go.
 - **Examples**: worked, runnable code and artifacts from the chapters.
 
-Nothing shipped yet, this is where it will land. Watch or star the repo to catch it.
+Nothing shipped yet. Star the repo and it will be linked here the moment it lands.
 
-## Discussions and comments
+## This repo
 
-Every chapter page has its own comment thread. Comment right from the page, or [open a discussion here](../../discussions). Be kind, stay on topic, and search before posting.
-
-## Contributing
-
-Spotted an error, an outdated command, or a gap? Open a discussion or a pull request. Content fixes flow back into the book; skills, starters, and examples live and evolve here.
+- **Read the book** at [zalt.me](${base}), free. This repo is the companion, not the book text.
+- **Ask and discuss:** every chapter page has its own comment thread, or [open a discussion](../../discussions). Be kind, stay on topic, search before posting.
+- **Contribute:** spotted an error, an outdated command, or a gap? Open a discussion or a pull request. Content fixes flow back into the book.
 
 ## License
 
-Use the materials here to build anything you want, including commercial products. Just don't resell or redistribute the materials themselves as a standalone product. The book's text is not in this repo and is all rights reserved. See [LICENSE](./LICENSE).
+Use anything here to build whatever you want, including commercial products. Just don't resell or redistribute the materials themselves as a standalone product. The book's text is not in this repo and is all rights reserved. See [LICENSE](./LICENSE).
 
 ---
 
@@ -126,7 +117,7 @@ Written by [Mahmoud Zalt](${SITE}) · [zalt.me](${SITE})
 
 </div>
 
-<!-- TOC generated by scripts/gen-readme.mjs; do not hand-edit it. -->
+<!-- Generated by scripts/gen-readme.mjs; do not hand-edit. -->
 `
 
 fs.writeFileSync(path.join(REPO, 'README.md'), readme)
