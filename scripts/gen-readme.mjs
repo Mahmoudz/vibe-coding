@@ -93,7 +93,7 @@ This book teaches you to build your **own** AI operating system to run your agen
 
 If you would rather start from a working one, there may be a shortcut. The author runs a private, battle-tested system that does what this book describes, and it could be released as its own project.
 
-**Want it? [Vote for it in the discussions →](../../discussions).** Enough interest and it ships.
+**Want it? [Vote for it here →](../../discussions/3).** Enough interest and it ships.
 
 ## This repo
 
