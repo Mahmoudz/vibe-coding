@@ -21,11 +21,29 @@ Build Apps That Work Beyond the Demo.
 
 ---
 
-AI writes the code. It cannot decide **what** to build, **how** to structure it, when it is **wrong**, or what "production-grade" actually means. This book teaches the professional lifecycle around the code, from a plain idea to live, monitored, scaling software, at a level a non-pro can follow.
+You get your AI to build something impressive in a weekend. A month later you're afraid to touch it.
+
+Not because the model is bad. Not because your prompts were bad. Because **building software and maintaining software are completely different problems.**
+
+Anyone can get AI to generate code. The hard part is keeping that app alive after the first version ships. Every new feature adds complexity. Every refactor risks breaking something else. The architecture drifts, context gets lost, old bugs come back, and technical debt grows faster than the AI can pay it down. Eventually you spend more time directing, checking, and repairing the AI than you'd have spent writing the code yourself.
+
+That's the point where most people decide AI isn't ready. I think they're solving the wrong problem.
+
+The question isn't *"How do I get AI to build my app?"*
+
+The question is *"How do I build a system that can continuously build, test, deploy, monitor, and improve my app?"*
+
+One produces code. The other produces **software that survives.**
+
+That's also why prompting alone isn't enough. A prompt only tells the AI what to do next. A production system needs memory, architecture, standards, testing, deployment, monitoring, feedback loops, schedules, tools, and clear boundaries about what can happen automatically and what still needs a human.
+
+Once those pieces exist, something changes. The AI stops behaving like a coding assistant and starts behaving like a **software engineering system**: it implements a feature, verifies it, deploys it, watches production, investigates failures, fixes safe issues on its own, proposes improvements from real usage, and comes back only when a decision actually needs you.
+
+You don't get there with a magic prompt. You get there by building the engineering system first. **That's what this book walks you through, one stage at a time.**
 
 **Who it's for:** people who build mostly by directing an AI agent (Cursor, Claude Code, and friends) and want apps that hold up in production, not demos that fall over. No CS degree assumed. If you can describe what you want and read what the agent gives back, you're in.
 
-## What's inside
+## The journey
 
 The complete arc, one stage per part:
 
@@ -46,6 +64,13 @@ The complete arc, one stage per part:
 | **12** | [**Ship**](https://zalt.me/guides/vibe-coding/ship) | Deploy to real infrastructure with environments, CI/CD, and releases you can roll back. |
 | **13** | [**Operate**](https://zalt.me/guides/vibe-coding/operate) | Keep it alive: logging, observability, alerting, backups, and incident response. |
 | **14** | [**Scale**](https://zalt.me/guides/vibe-coding/scale) | Grow it to handle real traffic and data without blowing the budget or the database. |
+
+Notice the shape:
+
+- The **first half** teaches you to build software like a senior engineer.
+- The **second half** teaches you how software stays alive without needing you.
+
+Only once that lifecycle exists can you hand it over piece by piece. As the system earns your trust, you give it more responsibility, until it can safely build, deploy, and maintain your app with minimal supervision. You never fully disappear from the loop, you just stop being responsible for every step inside it.
 
 ## Want the ready-made system?
 
