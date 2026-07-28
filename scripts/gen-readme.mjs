@@ -80,9 +80,9 @@ const readme = `<div align="center">
 
 ### ${SUBTITLE}
 
-${TAGLINE}.
+**A free web book** on building production-grade software with AI, from a plain idea to live, scaling software, using agents like Cursor and Claude Code. No signup, no paywall to start.
 
-**A free, end-to-end guide to building production-grade software with AI**, from a plain idea to live, scaling software, using agents like Cursor and Claude Code. No signup, no paywall to start.
+${TAGLINE}.
 
 [**Read it free online →**](${base})
 
@@ -93,25 +93,23 @@ ${TAGLINE}.
 [![Prompts](${badge('prompts', '100+', 'f59e0b')})](${base})
 [![Discussions](https://img.shields.io/github/discussions/${REPO_SLUG}?color=6d28d9&label=discussions)](../../discussions)
 
-[![Watch the trailer](https://img.youtube.com/vi/VWxyoqE3FeA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VWxyoqE3FeA)
-
-[**▶ Watch the trailer on YouTube**](https://www.youtube.com/watch?v=VWxyoqE3FeA)
-
 </div>
 
 ---
 
-## The problem
+## Why this exists
+
+### The problem
 
 You get your AI to build something impressive in a weekend. A month later you're afraid to touch it.
 
 Not because the model is bad. Not because your prompts were bad. Because **building software and maintaining software are completely different problems.**
 
-Anyone can get AI to generate code. The hard part is keeping that app alive after the first version ships. Every new feature adds complexity. Every refactor risks breaking something else. The architecture drifts, context gets lost, old bugs come back, and technical debt grows faster than the AI can pay it down. Eventually you spend more time directing, checking, and repairing the AI than you'd have spent writing the code yourself.
+Anyone can get AI to generate code. The hard part is keeping that app alive after the first version ships. Every new feature adds complexity. Every refactor risks breaking something else. The architecture drifts, context gets lost, old bugs come back, and technical debt grows faster than the AI can pay it down.
 
 That's the point where most people decide AI isn't ready. I think they're solving the wrong problem.
 
-## What actually breaks
+### What actually breaks
 
 The code was never the problem. AI writes working code on the first try more often than most engineers do. What breaks is everything around the code:
 
@@ -123,7 +121,7 @@ The code was never the problem. AI writes working code on the first try more oft
 
 None of that is an AI problem. It's **software engineering, running at ten times the speed, with nobody enforcing the discipline that used to come from typing every line yourself.**
 
-## It's a process problem, not a prompt problem
+### It's a process problem, not a prompt problem
 
 A prompt only tells the AI what to do next. It doesn't give it memory, architecture, standards, tests, deployment, monitoring, or a clear line between what it can decide alone and what needs you.
 
@@ -133,9 +131,11 @@ I spent over a decade writing software by hand, then the last few years building
 
 People who build mostly by directing an AI agent (Cursor, Claude Code, and friends) and want apps that hold up in production, not demos that fall over. No CS degree assumed. If you can describe what you want and read what the agent gives back, you're in.
 
-## The journey
+## What's inside
 
-The complete arc, one stage per part:
+[![Watch the trailer](https://img.youtube.com/vi/VWxyoqE3FeA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VWxyoqE3FeA)
+
+[**▶ Watch the trailer on YouTube**](https://www.youtube.com/watch?v=VWxyoqE3FeA) · the complete arc, one stage per part, below:
 
 ${toc.join('\n')}
 
@@ -145,7 +145,14 @@ Notice the shape:
 - The **second half** teaches you how software stays alive without needing you.
 - Every stage ships with copy-paste-ready prompts, **100+** across the book, so you are never staring at a blank cursor.
 
-Only once that lifecycle exists can you hand it over piece by piece. As the system earns your trust, you give it more responsibility, until it can safely build, deploy, and maintain your app with minimal supervision. You never fully disappear from the loop, you just stop being responsible for every step inside it.
+Only once that lifecycle exists can you hand it over piece by piece. As the system earns your trust, you give it more responsibility, until it can safely build, deploy, and maintain your app with minimal supervision.
+
+## For your AI agent
+
+Give your own coding agent (Claude Code, Codex, Cursor, or anything that reads \`AGENTS.md\`) a one-page primer on this book: what it is, who it's for, and a link for every stage, so it can point you to the right chapter instead of guessing.
+
+- **Claude Code:** \`curl -o .claude/skills/vibe-coding-book/SKILL.md https://raw.githubusercontent.com/${REPO_SLUG}/main/skills/vibe-coding-book/SKILL.md\` *(or just copy [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md))*
+- **Codex, Cursor, or anything else:** copy the body of [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md) (everything below the frontmatter) into your project's \`AGENTS.md\`, or into \`.cursor/rules/vibe-coding-book.mdc\` for Cursor.
 
 ## About the author
 
@@ -158,13 +165,6 @@ This book teaches you to build your **own** AI operating system to run your agen
 If you would rather start from a working one, there may be a shortcut. The author runs a private, battle-tested system that does what this book describes, and it could be released as its own project.
 
 **Want it? [Vote for it here →](../../discussions/3).** Enough interest and it ships.
-
-## For your AI agent
-
-Give your own coding agent (Claude Code, Codex, Cursor, or anything that reads \`AGENTS.md\`) a one-page primer on this book: what it is, who it's for, and a link for every stage, so it can point you to the right chapter instead of guessing.
-
-- **Claude Code:** \`curl -o .claude/skills/vibe-coding-book/SKILL.md https://raw.githubusercontent.com/${REPO_SLUG}/main/skills/vibe-coding-book/SKILL.md\` *(or just copy [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md))*
-- **Codex, Cursor, or anything else:** copy the body of [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md) (everything below the frontmatter) into your project's \`AGENTS.md\`, or into \`.cursor/rules/vibe-coding-book.mdc\` for Cursor.
 
 ## This repo
 
