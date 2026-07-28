@@ -98,6 +98,13 @@ If you would rather start from a working one, there may be a shortcut. The autho
 
 **Want it? [Vote for it here →](../../discussions/3).** Enough interest and it ships.
 
+## For your AI agent
+
+Give your own coding agent (Claude Code, Codex, Cursor, or anything that reads `AGENTS.md`) a one-page primer on this book: what it is, who it's for, and a link for every stage, so it can point you to the right chapter instead of guessing.
+
+- **Claude Code:** `curl -o .claude/skills/vibe-coding-book/SKILL.md https://raw.githubusercontent.com/Mahmoudz/vibe-coding/main/skills/vibe-coding-book/SKILL.md` *(or just copy [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md))*
+- **Codex, Cursor, or anything else:** copy the body of [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md) (everything below the frontmatter) into your project's `AGENTS.md`, or into `.cursor/rules/vibe-coding-book.mdc` for Cursor.
+
 ## This repo
 
 - **Read the book** at [zalt.me](https://zalt.me/guides/vibe-coding), free. This repo is the companion, not the book text.

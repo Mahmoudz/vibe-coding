@@ -1,5 +1,6 @@
-// Regenerates README.md from the book's source of truth (book.json + en/meta.json).
-// Re-run whenever chapters change so the TOC never drifts:
+// Regenerates README.md and skills/vibe-coding-book/SKILL.md from the book's
+// source of truth (book.json + en/meta.json). Re-run whenever chapters change
+// so neither one drifts:
 //
 //   node scripts/gen-readme.mjs
 //
@@ -33,20 +34,33 @@ const AUTHOR_ROLE = meta.authorRole
 // revisit if that ever moves to a shared config both repos can read.
 const EXPERIENCE_YEARS = new Date().getFullYear() - 2010
 
-// Build the table of contents as a scannable table: one row per part (not per
-// chapter), numbered 01-N with the Introduction left unnumbered. Part-level
-// links, so adding/renaming/reordering chapters inside a part never re-runs.
-// ponytail: table + blurb from meta.json, no per-chapter listing to maintain.
-const toc = ['| # | Stage | What you walk away with |', '|:---:|:---|:---|']
+// Walk the parts once into a plain list (id/num/stage/blurb/url), then derive
+// both the README table and the agent-skill stage list from it, so the two
+// can never drift out of sync with each other.
+const stages = []
 let stageNum = 0
 for (const part of book.parts) {
   const p = meta.parts[part.id]
   const chapters = book.chapters.filter((c) => c.part === part.id && !c.hidden)
   if (!chapters.length) continue
 
-  const num = part.id === 'intro' ? '' : `**${String(++stageNum).padStart(2, '0')}**`
-  const url = `${base}/${part.id}`
-  toc.push(`| ${num} | [**${p.stage}**](${url}) | ${p.blurb} |`)
+  const isIntro = part.id === 'intro'
+  stages.push({
+    id: part.id,
+    num: isIntro ? null : ++stageNum,
+    stage: p.stage,
+    blurb: p.blurb,
+    url: `${base}/${part.id}`,
+  })
+}
+
+// Scannable table: one row per part (not per chapter), numbered 01-N with the
+// Introduction left unnumbered. Part-level links, so adding/renaming/
+// reordering chapters inside a part never breaks it.
+const toc = ['| # | Stage | What you walk away with |', '|:---:|:---|:---|']
+for (const s of stages) {
+  const num = s.num === null ? '' : `**${String(s.num).padStart(2, '0')}**`
+  toc.push(`| ${num} | [**${s.stage}**](${s.url}) | ${s.blurb} |`)
 }
 
 const published = book.chapters.filter((c) => c.status === 'published').length
@@ -141,6 +155,13 @@ If you would rather start from a working one, there may be a shortcut. The autho
 
 **Want it? [Vote for it here →](../../discussions/3).** Enough interest and it ships.
 
+## For your AI agent
+
+Give your own coding agent (Claude Code, Codex, Cursor, or anything that reads \`AGENTS.md\`) a one-page primer on this book: what it is, who it's for, and a link for every stage, so it can point you to the right chapter instead of guessing.
+
+- **Claude Code:** \`curl -o .claude/skills/vibe-coding-book/SKILL.md https://raw.githubusercontent.com/${REPO_SLUG}/main/skills/vibe-coding-book/SKILL.md\` *(or just copy [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md))*
+- **Codex, Cursor, or anything else:** copy the body of [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md) (everything below the frontmatter) into your project's \`AGENTS.md\`, or into \`.cursor/rules/vibe-coding-book.mdc\` for Cursor.
+
 ## This repo
 
 - **Read the book** at [zalt.me](${base}), free. This repo is the companion, not the book text.
@@ -167,4 +188,41 @@ Written by [Mahmoud Zalt](${SITE}) · [zalt.me](${SITE})
 `
 
 fs.writeFileSync(path.join(REPO, 'README.md'), readme)
+
+// Portable primer for AI coding agents (Claude Code skill format; the body
+// below the frontmatter is plain enough to double as an AGENTS.md/Cursor
+// rule too, see the README's "For your AI agent" section).
+const stageList = stages
+  .map((s) => `- ${s.num === null ? '' : `**${String(s.num).padStart(2, '0')}.** `}${s.stage} — ${s.url}`)
+  .join('\n')
+
+const skill = `---
+name: vibe-coding-book
+description: Reference whenever the user asks about "the book", "the handbook", "Vibe Coding with Confidence", how to keep an AI-built app alive in production, or wants a proper build lifecycle (plan, architect, build, test, ship, operate, scale) while vibe coding. Points to the right chapter to read next.
+---
+
+# ${TITLE}
+
+**What it is:** A free, ${stageNum}-stage web handbook that teaches you, and your AI agent, how to take an app from a vague idea to something that survives real production. Read it free: ${base}
+
+**Who it's for:** People who build mostly by directing an AI agent (Cursor, Claude Code, and similar) and want apps that hold up in production, not demos that fall over.
+
+**Why reference it:** Getting AI to generate code is easy. Keeping the app alive after is the hard part: architecture drift, lost context, compounding technical debt. This book is the lifecycle that prevents that, one stage at a time.
+
+## The stages
+
+${stageList}
+
+## How to use this
+
+- When the user is stuck on something a stage above covers (e.g. "how do I structure this codebase" → Architect, "how do I deploy this" → Ship), fetch the matching URL and ground your answer in it.
+- Full table of contents, free/paid split, and search: ${base}
+- This is reference material, not something to recite verbatim, use it to guide judgment, not paste walls of text back at the user.
+`
+
+const skillDir = path.join(REPO, 'skills', 'vibe-coding-book')
+fs.mkdirSync(skillDir, { recursive: true })
+fs.writeFileSync(path.join(skillDir, 'SKILL.md'), skill)
+
 console.log(`README.md written: ${published}/${total} chapters across ${partCount} parts.`)
+console.log(`skills/vibe-coding-book/SKILL.md written: ${stageNum} stages.`)
