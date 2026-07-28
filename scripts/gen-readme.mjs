@@ -28,6 +28,10 @@ const base = SITE + book.basePath
 const TITLE = meta.title.replace(/\s*\n\s*/g, ' ')
 const SUBTITLE = meta.subtitle
 const TAGLINE = meta.tagline.replace(/\.+$/, '')
+const AUTHOR_ROLE = meta.authorRole
+// ponytail: career start year hardcoded here too (matches src/data/info.ts);
+// revisit if that ever moves to a shared config both repos can read.
+const EXPERIENCE_YEARS = new Date().getFullYear() - 2010
 
 // Build the table of contents as a scannable table: one row per part (not per
 // chapter), numbered 01-N with the Introduction left unnumbered. Part-level
@@ -70,14 +74,16 @@ ${TAGLINE}.
 
 [![Free to read](${badge('read', 'free', '16a34a')})](${base})
 [![Web book](${badge('format', 'web book', '111')})](${base})
-[![Chapters](${badge('chapters', `${total}`, '2563eb')})](${base})
+[![Chapters](${badge('chapters', `${stageNum}`, '2563eb')})](${base})
+[![Pages](${badge('pages', `${total}`, '16a34a')})](${base})
+[![Prompts](${badge('prompts', '100+', 'f59e0b')})](${base})
 [![Discussions](https://img.shields.io/github/discussions/${REPO_SLUG}?color=6d28d9&label=discussions)](../../discussions)
+
+[![Watch the trailer](https://img.youtube.com/vi/VWxyoqE3FeA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VWxyoqE3FeA)
 
 </div>
 
 ---
-
-[![Watch the trailer](https://img.youtube.com/vi/VWxyoqE3FeA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VWxyoqE3FeA)
 
 ## The problem
 
@@ -119,8 +125,13 @@ Notice the shape:
 
 - The **first half** teaches you to build software like a senior engineer.
 - The **second half** teaches you how software stays alive without needing you.
+- Every stage ships with copy-paste-ready prompts, **100+** across the book, so you are never staring at a blank cursor.
 
 Only once that lifecycle exists can you hand it over piece by piece. As the system earns your trust, you give it more responsibility, until it can safely build, deploy, and maintain your app with minimal supervision. You never fully disappear from the loop, you just stop being responsible for every step inside it.
+
+## About the author
+
+I'm Mahmoud Zalt, ${AUTHOR_ROLE}, ${EXPERIENCE_YEARS}+ years building scalable systems. Through [Sistava.com](https://sistava.com) I took a product from concept to production in 3 months using the exact framework this book teaches. More at [zalt.me](${SITE}).
 
 ## Want the ready-made system?
 

@@ -6,7 +6,7 @@
 
 ### The Vibecoder's Handbook, from idea to production
 
-Build Apps That Work Beyond the Demo.
+Build Reliable Apps That Survive Production.
 
 **A free, end-to-end guide to building production-grade software with AI**, from a plain idea to live, scaling software, using agents like Cursor and Claude Code. No signup, no paywall to start.
 
@@ -14,14 +14,16 @@ Build Apps That Work Beyond the Demo.
 
 [![Free to read](https://img.shields.io/badge/read-free-16a34a)](https://zalt.me/guides/vibe-coding)
 [![Web book](https://img.shields.io/badge/format-web%20book-111)](https://zalt.me/guides/vibe-coding)
-[![Chapters](https://img.shields.io/badge/chapters-140-2563eb)](https://zalt.me/guides/vibe-coding)
+[![Chapters](https://img.shields.io/badge/chapters-15-2563eb)](https://zalt.me/guides/vibe-coding)
+[![Pages](https://img.shields.io/badge/pages-140-16a34a)](https://zalt.me/guides/vibe-coding)
+[![Prompts](https://img.shields.io/badge/prompts-100%2B-f59e0b)](https://zalt.me/guides/vibe-coding)
 [![Discussions](https://img.shields.io/github/discussions/Mahmoudz/vibe-coding?color=6d28d9&label=discussions)](../../discussions)
+
+[![Watch the trailer](https://img.youtube.com/vi/VWxyoqE3FeA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VWxyoqE3FeA)
 
 </div>
 
 ---
-
-[![Watch the trailer](https://img.youtube.com/vi/VWxyoqE3FeA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VWxyoqE3FeA)
 
 ## The problem
 
@@ -80,8 +82,13 @@ Notice the shape:
 
 - The **first half** teaches you to build software like a senior engineer.
 - The **second half** teaches you how software stays alive without needing you.
+- Every stage ships with copy-paste-ready prompts, **100+** across the book, so you are never staring at a blank cursor.
 
 Only once that lifecycle exists can you hand it over piece by piece. As the system earns your trust, you give it more responsibility, until it can safely build, deploy, and maintain your app with minimal supervision. You never fully disappear from the loop, you just stop being responsible for every step inside it.
+
+## About the author
+
+I'm Mahmoud Zalt, Principal AI Architect, 16+ years building scalable systems. Through [Sistava.com](https://sistava.com) I took a product from concept to production in 3 months using the exact framework this book teaches. More at [zalt.me](https://zalt.me).
 
 ## Want the ready-made system?
 
