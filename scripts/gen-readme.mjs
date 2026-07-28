@@ -77,6 +77,10 @@ ${TAGLINE}.
 
 ---
 
+[![Watch the trailer](https://img.youtube.com/vi/VWxyoqE3FeA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VWxyoqE3FeA)
+
+## The problem
+
 You get your AI to build something impressive in a weekend. A month later you're afraid to touch it.
 
 Not because the model is bad. Not because your prompts were bad. Because **building software and maintaining software are completely different problems.**
@@ -85,19 +89,25 @@ Anyone can get AI to generate code. The hard part is keeping that app alive afte
 
 That's the point where most people decide AI isn't ready. I think they're solving the wrong problem.
 
+## Ask a different question
+
 The question isn't *"How do I get AI to build my app?"*
 
 The question is *"How do I build a system that can continuously build, test, deploy, monitor, and improve my app?"*
 
 One produces code. The other produces **software that survives.**
 
-That's also why prompting alone isn't enough. A prompt only tells the AI what to do next. A production system needs memory, architecture, standards, testing, deployment, monitoring, feedback loops, schedules, tools, and clear boundaries about what can happen automatically and what still needs a human.
+## Why prompting alone isn't enough
+
+A prompt only tells the AI what to do next. A production system needs memory, architecture, standards, testing, deployment, monitoring, feedback loops, schedules, tools, and clear boundaries about what can happen automatically and what still needs a human.
 
 Once those pieces exist, something changes. The AI stops behaving like a coding assistant and starts behaving like a **software engineering system**: it implements a feature, verifies it, deploys it, watches production, investigates failures, fixes safe issues on its own, proposes improvements from real usage, and comes back only when a decision actually needs you.
 
 You don't get there with a magic prompt. You get there by building the engineering system first. **That's what this book walks you through, one stage at a time.**
 
-**Who it's for:** people who build mostly by directing an AI agent (Cursor, Claude Code, and friends) and want apps that hold up in production, not demos that fall over. No CS degree assumed. If you can describe what you want and read what the agent gives back, you're in.
+## Who it's for
+
+People who build mostly by directing an AI agent (Cursor, Claude Code, and friends) and want apps that hold up in production, not demos that fall over. No CS degree assumed. If you can describe what you want and read what the agent gives back, you're in.
 
 ## The journey
 
@@ -125,6 +135,10 @@ If you would rather start from a working one, there may be a shortcut. The autho
 - **Read the book** at [zalt.me](${base}), free. This repo is the companion, not the book text.
 - **Ask and discuss:** every chapter page has its own comment thread, or [open a discussion](../../discussions). Be kind, stay on topic, search before posting.
 - **Contribute:** spotted an error, an outdated command, or a gap? Open a discussion or a pull request. Content fixes flow back into the book.
+
+A page from inside the book:
+
+![A page from inside the book](${SITE}/images/guides/vibe-coding-preview.jpg)
 
 ## License
 
