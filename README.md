@@ -14,6 +14,8 @@ Build Reliable Apps That Survive Production.
 
 ### [Read it free online →](https://zalt.me/guides/vibe-coding)
 
+⭐ **This book has no publisher and no marketing budget. A star is how other developers find it.**
+
 </div>
 
 ---
