@@ -105,35 +105,19 @@ ${TAGLINE}.
 
 ---
 
+## What this is
+
+The companion repo for the free web book above, not a codebase to clone and run. It holds an AI agent skill and this discussion board, nothing you deploy.
+
+- **Read the book:** ${base}. Its first chapter gives you a prompt to paste into your AI agent that sets up your whole project, you do nothing by hand.
+- **Install the skill:** copy [skills/vibe-coding-book](./skills/vibe-coding-book) into your own AI agent (see "For your AI agent" below) so it knows the book and can point you to the right chapter mid-build.
+- One skill today, more materials land here over time.
+
 ## Why this exists
 
-### The problem
+Getting AI to write code is easy. Keeping the app alive after is the hard part: the agent forgets what it built last week, context drifts mid-session, it loops on the same bug, or it ships code that works but isn't safe. None of that is an AI problem, it's **software engineering at ten times the speed, with nobody enforcing the discipline that used to come from typing every line yourself.**
 
-You get your AI to build something impressive in a weekend. A month later you're afraid to touch it.
-
-Not because the model is bad. Not because your prompts were bad. Because **building software and maintaining software are completely different problems.**
-
-Anyone can get AI to generate code. The hard part is keeping that app alive after the first version ships. Every new feature adds complexity. Every refactor risks breaking something else. The architecture drifts, context gets lost, old bugs come back, and technical debt grows faster than the AI can pay it down.
-
-That's the point where most people decide AI isn't ready. I think they're solving the wrong problem.
-
-### What actually breaks
-
-The code was never the problem. AI writes working code on the first try more often than most engineers do. What breaks is everything around the code:
-
-- The agent forgets what it built last week and reimplements it slightly differently.
-- Context drifts mid-session and the answers quietly get worse.
-- It loops on the same bug, retrying the same fix over and over.
-- It ships code that works but isn't safe, and you hear about it from a stranger's email.
-- It reaches for abstractions nobody asked for, or swaps a core dependency without telling you.
-
-None of that is an AI problem. It's **software engineering, running at ten times the speed, with nobody enforcing the discipline that used to come from typing every line yourself.**
-
-### It's a process problem, not a prompt problem
-
-A prompt only tells the AI what to do next. It doesn't give it memory, architecture, standards, tests, deployment, monitoring, or a clear line between what it can decide alone and what needs you.
-
-I spent over a decade writing software by hand, then the last few years building almost everything with AI. After the first few large AI-built projects broke in the same predictable ways, I wrote down what worked and what consistently failed. That became the 15 stages in this book, **the same order I now run on every build.**
+A prompt only tells the AI what to do next. It doesn't give it memory, architecture, tests, deployment, or a line between what it can decide alone and what needs you. I spent over a decade writing software by hand, then the last few years building almost everything with AI, and after the first few large AI-built projects broke in the same predictable ways, I wrote down what worked. **That became the 15 stages in this book, the same order I now run on every build.**
 
 ## Who it's for
 
