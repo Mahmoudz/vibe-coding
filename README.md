@@ -37,21 +37,23 @@ Anyone can get AI to generate code. The hard part is keeping that app alive afte
 
 That's the point where most people decide AI isn't ready. I think they're solving the wrong problem.
 
-## Ask a different question
+## What actually breaks
 
-The question isn't *"How do I get AI to build my app?"*
+The code was never the problem. AI writes working code on the first try more often than most engineers do. What breaks is everything around the code:
 
-The question is *"How do I build a system that can continuously build, test, deploy, monitor, and improve my app?"*
+- The agent forgets what it built last week and reimplements it slightly differently.
+- Context drifts mid-session and the answers quietly get worse.
+- It loops on the same bug, retrying the same fix over and over.
+- It ships code that works but isn't safe, and you hear about it from a stranger's email.
+- It reaches for abstractions nobody asked for, or swaps a core dependency without telling you.
 
-One produces code. The other produces **software that survives.**
+None of that is an AI problem. It's **software engineering, running at ten times the speed, with nobody enforcing the discipline that used to come from typing every line yourself.**
 
-## Why prompting alone isn't enough
+## It's a process problem, not a prompt problem
 
-A prompt only tells the AI what to do next. A production system needs memory, architecture, standards, testing, deployment, monitoring, feedback loops, schedules, tools, and clear boundaries about what can happen automatically and what still needs a human.
+A prompt only tells the AI what to do next. It doesn't give it memory, architecture, standards, tests, deployment, monitoring, or a clear line between what it can decide alone and what needs you.
 
-Once those pieces exist, something changes. The AI stops behaving like a coding assistant and starts behaving like a **software engineering system**: it implements a feature, verifies it, deploys it, watches production, investigates failures, fixes safe issues on its own, proposes improvements from real usage, and comes back only when a decision actually needs you.
-
-You don't get there with a magic prompt. You get there by building the engineering system first. **That's what this book walks you through, one stage at a time.**
+I spent over a decade writing software by hand, then the last few years building almost everything with AI. After the first few large AI-built projects broke in the same predictable ways, I wrote down what worked and what consistently failed. That became the 15 stages in this book, **the same order I now run on every build.**
 
 ## Who it's for
 
