@@ -4,3 +4,10 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+# Internal-only tooling. This is a PUBLIC repo: never commit .claude/ here.
+# An internal skill leaked in the initial commit and its history had to be
+# rewritten to remove it (see backup-before-history-rewrite locally, not
+# pushed). A future end-user-facing Claude skill for readers belongs under
+# skills/ (the "materials" the README promises), never under .claude/.
+.claude/
