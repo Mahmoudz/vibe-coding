@@ -21,6 +21,8 @@ Build Reliable Apps That Survive Production.
 
 [![Watch the trailer](https://img.youtube.com/vi/VWxyoqE3FeA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VWxyoqE3FeA)
 
+[**▶ Watch the trailer on YouTube**](https://www.youtube.com/watch?v=VWxyoqE3FeA)
+
 </div>
 
 ---
