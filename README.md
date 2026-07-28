@@ -10,14 +10,9 @@
 
 Build Reliable Apps That Survive Production.
 
-[**Read it free online →**](https://zalt.me/guides/vibe-coding)
+[![Free to read](https://img.shields.io/badge/read-free-16a34a)](https://zalt.me/guides/vibe-coding) [![Web book](https://img.shields.io/badge/format-web%20book-111)](https://zalt.me/guides/vibe-coding) [![Chapters](https://img.shields.io/badge/chapters-15-2563eb)](https://zalt.me/guides/vibe-coding) [![Pages](https://img.shields.io/badge/pages-140-16a34a)](https://zalt.me/guides/vibe-coding) [![Prompts](https://img.shields.io/badge/prompts-100%2B-f59e0b)](https://zalt.me/guides/vibe-coding) [![Discussions](https://img.shields.io/github/discussions/Mahmoudz/vibe-coding?color=6d28d9&label=discussions)](../../discussions)
 
-[![Free to read](https://img.shields.io/badge/read-free-16a34a)](https://zalt.me/guides/vibe-coding)
-[![Web book](https://img.shields.io/badge/format-web%20book-111)](https://zalt.me/guides/vibe-coding)
-[![Chapters](https://img.shields.io/badge/chapters-15-2563eb)](https://zalt.me/guides/vibe-coding)
-[![Pages](https://img.shields.io/badge/pages-140-16a34a)](https://zalt.me/guides/vibe-coding)
-[![Prompts](https://img.shields.io/badge/prompts-100%2B-f59e0b)](https://zalt.me/guides/vibe-coding)
-[![Discussions](https://img.shields.io/github/discussions/Mahmoudz/vibe-coding?color=6d28d9&label=discussions)](../../discussions)
+### [Read it free online →](https://zalt.me/guides/vibe-coding)
 
 </div>
 

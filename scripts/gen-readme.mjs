@@ -84,14 +84,9 @@ const readme = `<div align="center">
 
 ${TAGLINE}.
 
-[**Read it free online →**](${base})
+[![Free to read](${badge('read', 'free', '16a34a')})](${base}) [![Web book](${badge('format', 'web book', '111')})](${base}) [![Chapters](${badge('chapters', `${stageNum}`, '2563eb')})](${base}) [![Pages](${badge('pages', `${total}`, '16a34a')})](${base}) [![Prompts](${badge('prompts', '100+', 'f59e0b')})](${base}) [![Discussions](https://img.shields.io/github/discussions/${REPO_SLUG}?color=6d28d9&label=discussions)](../../discussions)
 
-[![Free to read](${badge('read', 'free', '16a34a')})](${base})
-[![Web book](${badge('format', 'web book', '111')})](${base})
-[![Chapters](${badge('chapters', `${stageNum}`, '2563eb')})](${base})
-[![Pages](${badge('pages', `${total}`, '16a34a')})](${base})
-[![Prompts](${badge('prompts', '100+', 'f59e0b')})](${base})
-[![Discussions](https://img.shields.io/github/discussions/${REPO_SLUG}?color=6d28d9&label=discussions)](../../discussions)
+### [Read it free online →](${base})
 
 </div>
 
