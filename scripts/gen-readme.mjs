@@ -125,9 +125,9 @@ People who build mostly by directing an AI agent (Cursor, Claude Code, and frien
 
 ## What's inside
 
-[![Watch the trailer](https://img.youtube.com/vi/VWxyoqE3FeA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VWxyoqE3FeA)
+[![Watch the trailer](https://img.youtube.com/vi/oSfCZ2kIglk/maxresdefault.jpg)](https://www.youtube.com/watch?v=oSfCZ2kIglk)
 
-[**▶ Watch the trailer on YouTube**](https://www.youtube.com/watch?v=VWxyoqE3FeA) · the complete arc, one stage per part, below:
+[**▶ Watch the trailer on YouTube**](https://www.youtube.com/watch?v=oSfCZ2kIglk) · the complete arc, one stage per part, below:
 
 ${toc.join('\n')}
 
