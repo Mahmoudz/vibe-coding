@@ -131,20 +131,18 @@ People who build mostly by directing an AI agent (Cursor, Claude Code, and frien
 
 ${toc.join('\n')}
 
-Notice the shape:
+### The shape of it
 
 - The **first half** teaches you to build software like a senior engineer.
 - The **second half** teaches you how software stays alive without needing you.
 - Every stage ships with copy-paste-ready prompts, **100+** across the book, so you are never staring at a blank cursor.
 
-Only once that lifecycle exists can you hand it over piece by piece. As the system earns your trust, you give it more responsibility, until it can safely build, deploy, and maintain your app with minimal supervision.
-
 ## For your AI agent
 
-Give your own coding agent (Claude Code, Codex, Cursor, or anything that reads \`AGENTS.md\`) a one-page primer on this book: what it is, who it's for, and a link for every stage, so it can point you to the right chapter instead of guessing.
+Give your own coding agent (Claude Code, Codex, Cursor, or anything that reads \`AGENTS.md\`) a one-page primer on this book, so it can point you to the right chapter instead of guessing:
 
-- **Claude Code:** \`curl -o .claude/skills/vibe-coding-book/SKILL.md https://raw.githubusercontent.com/${REPO_SLUG}/main/skills/vibe-coding-book/SKILL.md\` *(or just copy [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md))*
-- **Codex, Cursor, or anything else:** copy the body of [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md) (everything below the frontmatter) into your project's \`AGENTS.md\`, or into \`.cursor/rules/vibe-coding-book.mdc\` for Cursor.
+- **Claude Code:** \`curl -o .claude/skills/vibe-coding-book/SKILL.md https://raw.githubusercontent.com/${REPO_SLUG}/main/skills/vibe-coding-book/SKILL.md\` *(or copy [skills/vibe-coding-book/SKILL.md](./skills/vibe-coding-book/SKILL.md) yourself)*
+- **Codex, Cursor, or anything else:** copy the body of that same file (everything below the frontmatter) into your project's \`AGENTS.md\`, or into \`.cursor/rules/vibe-coding-book.mdc\` for Cursor.
 
 ## About the author
 
@@ -152,19 +150,19 @@ I'm Mahmoud Zalt, ${AUTHOR_ROLE}, ${EXPERIENCE_YEARS}+ years building scalable s
 
 ## Want the ready-made system?
 
-This book teaches you to build your **own** AI operating system to run your agents. That is the point: you learn how it works, and you get something shaped exactly for how you build.
+Follow the book and, as it earns your trust, you hand your own system more responsibility, until it can build, deploy, and maintain your app with minimal supervision. Building your own is the point: you learn how it works, and you get something shaped exactly for how you build.
 
-If you would rather start from a working one, there may be a shortcut. The author runs a private, battle-tested system that does what this book describes, and it could be released as its own project.
+If you'd rather start from a working one, there may be a shortcut: the author runs a private, battle-tested system that does what this book describes, and it could be released as its own project.
 
 **Want it? [Vote for it here →](../../discussions/3).** Enough interest and it ships.
 
 ## This repo
 
 - **Read the book** at [zalt.me](${base}), free. This repo is the companion, not the book text.
-- **Ask and discuss:** every chapter page has its own comment thread, or [open a discussion](../../discussions). Be kind, stay on topic, search before posting.
-- **Contribute:** spotted an error, an outdated command, or a gap? Open a discussion or a pull request. Content fixes flow back into the book.
+- **Ask and discuss:** every chapter page has its own comment thread, or [open a discussion](../../discussions).
+- **Contribute:** spotted an error, an outdated command, or a gap? Open a discussion or a pull request, fixes flow back into the book.
 
-A page from inside the book:
+### Inside the book
 
 ![A page from inside the book](${SITE}/images/guides/vibe-coding-preview.jpg)
 
